@@ -1,15 +1,20 @@
 {
-  "name": "typescript-boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@ayase-lab/quick-alias",
+  "version": "0.1.0",
+  "description": "Configure alias for project once and maintain with ease",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "build": "tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/Ayase-252/quick-alias",
+  "bugs": {
+    "url": "https://github.com/Ayase-252/quick-alias/issues"
+  },
+  "author": "Ayase-252",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
