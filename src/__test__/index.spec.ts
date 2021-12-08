@@ -1,4 +1,4 @@
-import { configAliasForEslint } from ".."
+import { configAliasForEslint, configAliasForSnowpack } from ".."
 
 describe("ConfigAliasForEslint", () => {
   it("should produce correct eslint config", () => {
@@ -11,6 +11,20 @@ describe("ConfigAliasForEslint", () => {
         map: [
           ['@alias', "path/to/module"]
         ]
+      }
+    })
+  })
+})
+
+describe("ConfigAliasForSnowpack", () => {
+  it("should produce correct eslint config", () => {
+    const config = {
+      "@alias": "path/to/module"
+    }
+
+    expect(configAliasForSnowpack(config)).toEqual({
+      alias: {
+        "@alias": "path/to/module"
       }
     })
   })

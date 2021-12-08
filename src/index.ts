@@ -11,3 +11,15 @@ export function configAliasForEslint(config: UnifiedConfig): PartialEsLintImport
     alias: {map}
   }
 }
+
+type SnowpackAliasConfig = {
+  alias: {
+    [alias: string]: string
+  }
+}
+
+export function configAliasForSnowpack(config: UnifiedConfig): SnowpackAliasConfig {
+  return {
+    alias: {...config}
+  }
+}
