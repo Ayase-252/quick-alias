@@ -1,7 +1,17 @@
-import { add } from "..";
+import { configAliasForEslint } from ".."
 
-describe("add", () => {
-  it("should add two numbers", () => {
-    expect(add(1, 2)).toEqual(3);
-  });
-});
+describe("ConfigAliasForEslint", () => {
+  it("should produce correct eslint config", () => {
+    const config = {
+      "@alias": "path/to/module"
+    }
+
+    expect(configAliasForEslint(config)).toEqual({
+      alias: {
+        map: [
+          ['@alias', "path/to/module"]
+        ]
+      }
+    })
+  })
+})
